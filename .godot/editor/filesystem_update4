@@ -2,3 +2,5 @@ res://Credits.txt
 res://node_2d.tscn
 res://LICENSE.md
 res://Player.tscn
+res://player.gd
+res://level.tscn
