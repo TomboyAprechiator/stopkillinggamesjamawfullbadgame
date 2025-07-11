@@ -1,0 +1,9 @@
+Credits and Asset Licenses
+==========================
+
+Textures:
+	Grass texture taken from: 
+		Tiny Texture Pack 1
+		by Screaming Brain Studios
+		CC0/Public Domain License
+		https://screamingbrainstudios.itch.io/tiny-texture-pack

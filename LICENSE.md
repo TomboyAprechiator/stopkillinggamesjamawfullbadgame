@@ -1,7 +1,7 @@
 
 The MIT License (MIT)
 
-Copyright (c) 2025 llol111
+Copyright (c) 2025 TomboyAprechiator
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,3 +20,11 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+
+Assets and External Content  
+===========================
+
+All code, images, sprites, and other content created by me are licensed under the MIT License (see above).  
+External assets and content not created by me, to which the MIT License does not apply, are listed in full in credits.txt.
+Please consult credits.txt for asset sources and applicable licenses (e.g. CC0, CC-BY).

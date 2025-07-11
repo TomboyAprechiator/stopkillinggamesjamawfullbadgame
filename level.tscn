@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bow18bc2iysh5"]
+
+[ext_resource type="Texture2D" uid="uid://qjmtxdapql2y" path="res://Grass_06-256x256.png" id="1_u52ul"]
+
+[node name="Level" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(653, 364)
+scale = Vector2(5.09375, 2.85156)
+texture = ExtResource("1_u52ul")
