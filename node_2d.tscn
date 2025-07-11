@@ -1,3 +1,8 @@
-[gd_scene format=3 uid="uid://cm6epmui04ixf"]
+[gd_scene load_steps=2 format=3 uid="uid://cm6epmui04ixf"]
 
-[node name="Node2D" type="Node2D"]
+[ext_resource type="Texture2D" uid="uid://cokwhjsjso63m" path="res://Face.png" id="1_wtcfe"]
+
+[node name="Player" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_wtcfe")
