@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://cixera2tbe8kq"]
+
+[ext_resource type="Texture2D" uid="uid://qsioc5nariwi" path="res://Bricks_18-256x256.png" id="1_xxgf6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y4f30"]
+size = Vector2(256, 256)
+
+[node name="Wall" type="StaticBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_xxgf6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_y4f30")

@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://bow18bc2iysh5"]
+[gd_scene load_steps=8 format=3 uid="uid://bow18bc2iysh5"]
 
+[ext_resource type="Script" uid="uid://d672shsjg5s1" path="res://level.gd" id="1_f2txt"]
 [ext_resource type="Texture2D" uid="uid://qjmtxdapql2y" path="res://Grass_06-256x256.png" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://be0g6ovcmkk24" path="res://Player.tscn" id="2_vonw3"]
+[ext_resource type="PackedScene" uid="uid://cixera2tbe8kq" path="res://wall.tscn" id="3_oi3di"]
+[ext_resource type="Script" uid="uid://bdd4sgel1yuqp" path="res://timer.gd" id="4_0b4ue"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
+size = Vector2(29.5, 750)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
+size = Vector2(1364, 25)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_f2txt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(653, 364)
@@ -12,3 +22,59 @@ texture = ExtResource("1_u52ul")
 
 [node name="Player" parent="." instance=ExtResource("2_vonw3")]
 position = Vector2(85, 79)
+
+[node name="screenborder" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="screenborder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D"]
+position = Vector2(1320, 363)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="screenborder"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D2"]
+position = Vector2(-14, 359)
+shape = SubResource("RectangleShape2D_vonw3")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="screenborder"]
+position = Vector2(115, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D3"]
+position = Vector2(549, 27)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="screenborder"]
+position = Vector2(115, -42)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D4"]
+position = Vector2(535, 781)
+shape = SubResource("RectangleShape2D_oi3di")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+script = ExtResource("4_0b4ue")
+
+[node name="Walls" type="Node2D" parent="."]
+
+[node name="Wall5" parent="Walls" instance=ExtResource("3_oi3di")]
+position = Vector2(512, 522)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall4" parent="Walls" instance=ExtResource("3_oi3di")]
+position = Vector2(512, 423)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall3" parent="Walls" instance=ExtResource("3_oi3di")]
+position = Vector2(517, 55)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall2" parent="Walls" instance=ExtResource("3_oi3di")]
+position = Vector2(512, 178)
+scale = Vector2(0.5, 0.5)
+
+[node name="Wall" parent="Walls" instance=ExtResource("3_oi3di")]
+position = Vector2(512, 307)
+scale = Vector2(0.5, 0.5)
+
+[connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
