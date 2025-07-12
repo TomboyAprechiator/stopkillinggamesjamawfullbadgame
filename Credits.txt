@@ -2,7 +2,7 @@ Credits and Asset Licenses
 ==========================
 
 Textures:
-	Grass texture taken from: 
+	Grass & Bricks texture taken from: 
 		Tiny Texture Pack 1
 		by Screaming Brain Studios
 		CC0/Public Domain License

@@ -1,3 +1,10 @@
 res://Player.tscn
 res://level.tscn
 res://player.gd
+res://Credits.txt
+res://wall.tscn
+res://wall2.tscn
+res://bomb.tscn
+res://bomb.gd
+res://timer.gd
+res://bullet.tscn
