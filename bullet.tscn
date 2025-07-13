@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://eu2g0htxbou3"]
 
-[ext_resource type="Texture2D" uid="uid://bur4vq415ywc1" path="res://bullet.png" id="1_v7oki"]
+[ext_resource type="Texture2D" uid="uid://ccr3diuih5fx" path="res://bullet.png" id="1_v7oki"]
 
 [node name="bullet" type="RigidBody2D"]
 

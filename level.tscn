@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://bow18bc2iysh5"]
 
-[ext_resource type="Texture2D" uid="uid://qjmtxdapql2y" path="res://Grass_06-256x256.png" id="1_u52ul"]
+[ext_resource type="Texture2D" uid="uid://ueov38n5mff8" path="res://Grass_06-256x256.png" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://cixera2tbe8kq" path="res://wall.tscn" id="3_oi3di"]
 [ext_resource type="Script" uid="uid://bdd4sgel1yuqp" path="res://timer.gd" id="4_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://dvdxukih8ayq2" path="res://player_with_gun.tscn" id="4_f2txt"]

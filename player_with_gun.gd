@@ -13,4 +13,4 @@ func _process(delta: float) -> void:
 	if mousedir.length() > 50:
 		mouseangle = $Player.global_position.angle_to_point(get_global_mouse_position())
 	$gun.rotation = mouseangle
-	$gun.position = Vector2($gun.orbitradius*cos(mouseangle),$gun.orbitradius*sin(mouseangle))
+	$gun.position = $Player.position + Vector2($gun.orbitradius*cos(mouseangle),$gun.orbitradius*sin(mouseangle))
