@@ -58,11 +58,11 @@ script = ExtResource("4_0b4ue")
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall5" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(512, 522)
+position = Vector2(517, 487)
 scale = Vector2(0.5, 0.5)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(512, 423)
+position = Vector2(517, 426)
 scale = Vector2(0.5, 0.5)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("3_oi3di")]
@@ -70,11 +70,11 @@ position = Vector2(517, 55)
 scale = Vector2(0.5, 0.5)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(512, 178)
+position = Vector2(517, 180)
 scale = Vector2(0.5, 0.5)
 
 [node name="Wall" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(512, 307)
+position = Vector2(517, 306)
 scale = Vector2(0.5, 0.5)
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
