@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dvdxukih8ayq2"]
+
+[ext_resource type="PackedScene" uid="uid://be0g6ovcmkk24" path="res://Player.tscn" id="1_a31dd"]
+[ext_resource type="Script" uid="uid://0u48n7jjbw3f" path="res://player_with_gun.gd" id="1_p21nl"]
+[ext_resource type="PackedScene" uid="uid://ca4eeikhcckt6" path="res://gun.tscn" id="2_p21nl"]
+
+[node name="Player_with_gun" type="Node2D"]
+script = ExtResource("1_p21nl")
+
+[node name="Player" parent="." instance=ExtResource("1_a31dd")]
+
+[node name="gun" parent="." instance=ExtResource("2_p21nl")]
+position = Vector2(60, 0)

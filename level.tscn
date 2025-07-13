@@ -1,10 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://bow18bc2iysh5"]
+[gd_scene load_steps=7 format=3 uid="uid://bow18bc2iysh5"]
 
-[ext_resource type="Script" uid="uid://d672shsjg5s1" path="res://level.gd" id="1_f2txt"]
 [ext_resource type="Texture2D" uid="uid://qjmtxdapql2y" path="res://Grass_06-256x256.png" id="1_u52ul"]
-[ext_resource type="PackedScene" uid="uid://be0g6ovcmkk24" path="res://Player.tscn" id="2_vonw3"]
 [ext_resource type="PackedScene" uid="uid://cixera2tbe8kq" path="res://wall.tscn" id="3_oi3di"]
 [ext_resource type="Script" uid="uid://bdd4sgel1yuqp" path="res://timer.gd" id="4_0b4ue"]
+[ext_resource type="PackedScene" uid="uid://dvdxukih8ayq2" path="res://player_with_gun.tscn" id="4_f2txt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
 size = Vector2(29.5, 750)
@@ -13,15 +12,11 @@ size = Vector2(29.5, 750)
 size = Vector2(1364, 25)
 
 [node name="Level" type="Node2D"]
-script = ExtResource("1_f2txt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(653, 364)
 scale = Vector2(5.09375, 2.85156)
 texture = ExtResource("1_u52ul")
-
-[node name="Player" parent="." instance=ExtResource("2_vonw3")]
-position = Vector2(85, 79)
 
 [node name="screenborder" type="Node2D" parent="."]
 
@@ -76,5 +71,8 @@ scale = Vector2(0.5, 0.5)
 [node name="Wall" parent="Walls" instance=ExtResource("3_oi3di")]
 position = Vector2(517, 306)
 scale = Vector2(0.5, 0.5)
+
+[node name="Player_with_gun" parent="." instance=ExtResource("4_f2txt")]
+position = Vector2(124, 111)
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
