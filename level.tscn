@@ -6,10 +6,10 @@
 [ext_resource type="PackedScene" uid="uid://dvdxukih8ayq2" path="res://player_with_gun.tscn" id="4_f2txt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
-size = Vector2(29.5, 750)
+size = Vector2(431.75, 1471)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
-size = Vector2(1364, 25)
+size = Vector2(1364, 288.5)
 
 [node name="Level" type="Node2D"]
 
@@ -23,27 +23,27 @@ texture = ExtResource("1_u52ul")
 [node name="StaticBody2D" type="StaticBody2D" parent="screenborder"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D"]
-position = Vector2(1320, 363)
+position = Vector2(1513, 467.5)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="screenborder"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D2"]
-position = Vector2(-14, 359)
+position = Vector2(-215, 376)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="screenborder"]
 position = Vector2(115, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D3"]
-position = Vector2(549, 27)
+position = Vector2(536, -104)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="screenborder"]
 position = Vector2(115, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D4"]
-position = Vector2(535, 781)
+position = Vector2(536, 905)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="Timer" type="Timer" parent="."]

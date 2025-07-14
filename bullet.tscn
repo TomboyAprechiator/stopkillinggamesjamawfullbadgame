@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://ccr3diuih5fx" path="res://bullet.png" id="1_v7oki"]
 [ext_resource type="Script" uid="uid://67n5gqalvvww" path="res://bullet.gd" id="1_v8qja"]
 
-[node name="bullet" type="RigidBody2D"]
+[node name="bullet" type="RigidBody2D" groups=["bullets"]]
+inertia = 1.0
 script = ExtResource("1_v8qja")
-force = 1200.0
+force = 2000.0
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(2.242, 2)
