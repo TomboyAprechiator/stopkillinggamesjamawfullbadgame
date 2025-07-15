@@ -1,5 +1,5 @@
-extends Node2D
-var roomsize = Vector2(1280, 720)
+extends Camera2D
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -1,20 +1,37 @@
-[gd_scene load_steps=7 format=3 uid="uid://bow18bc2iysh5"]
+[gd_scene load_steps=8 format=3 uid="uid://bow18bc2iysh5"]
 
+[ext_resource type="Script" uid="uid://d672shsjg5s1" path="res://level.gd" id="1_f2txt"]
 [ext_resource type="Texture2D" uid="uid://ueov38n5mff8" path="res://Grass_06-256x256.png" id="1_u52ul"]
 [ext_resource type="PackedScene" uid="uid://cixera2tbe8kq" path="res://wall.tscn" id="3_oi3di"]
 [ext_resource type="Script" uid="uid://bdd4sgel1yuqp" path="res://timer.gd" id="4_0b4ue"]
 [ext_resource type="PackedScene" uid="uid://dvdxukih8ayq2" path="res://player_with_gun.tscn" id="4_f2txt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vonw3"]
-size = Vector2(431.75, 1471)
+size = Vector2(431.75, 2347.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
-size = Vector2(1364, 288.5)
+size = Vector2(3440, 288.5)
 
 [node name="Level" type="Node2D"]
+script = ExtResource("1_f2txt")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(653, 364)
+scale = Vector2(5.09375, 2.85156)
+texture = ExtResource("1_u52ul")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+position = Vector2(648, 1076)
+scale = Vector2(5.09375, 2.85156)
+texture = ExtResource("1_u52ul")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+position = Vector2(1943, 1076)
+scale = Vector2(5.09375, 2.85156)
+texture = ExtResource("1_u52ul")
+
+[node name="Sprite2D4" type="Sprite2D" parent="."]
+position = Vector2(1947, 349)
 scale = Vector2(5.09375, 2.85156)
 texture = ExtResource("1_u52ul")
 
@@ -23,27 +40,29 @@ texture = ExtResource("1_u52ul")
 [node name="StaticBody2D" type="StaticBody2D" parent="screenborder"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D"]
-position = Vector2(1513, 467.5)
+position = Vector2(2799, 311)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="screenborder"]
+position = Vector2(4, 27)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D2"]
-position = Vector2(-215, 376)
+position = Vector2(-214, 770)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="screenborder"]
-position = Vector2(115, -42)
+position = Vector2(154, -56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D3"]
-position = Vector2(536, -104)
+position = Vector2(1238, -93)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="screenborder"]
+visible = false
 position = Vector2(115, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D4"]
-position = Vector2(536, 905)
+position = Vector2(1573, 1619)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="Timer" type="Timer" parent="."]
@@ -74,5 +93,7 @@ scale = Vector2(0.5, 0.5)
 
 [node name="Player_with_gun" parent="." instance=ExtResource("4_f2txt")]
 position = Vector2(124, 111)
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
