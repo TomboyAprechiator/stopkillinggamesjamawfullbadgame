@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bow18bc2iysh5"]
+[gd_scene load_steps=9 format=3 uid="uid://bow18bc2iysh5"]
 
 [ext_resource type="Script" uid="uid://d672shsjg5s1" path="res://level.gd" id="1_f2txt"]
 [ext_resource type="Texture2D" uid="uid://ueov38n5mff8" path="res://Grass_06-256x256.png" id="1_u52ul"]
@@ -11,6 +11,9 @@ size = Vector2(431.75, 2347.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_oi3di"]
 size = Vector2(3440, 288.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f2txt"]
+size = Vector2(1280, 720)
 
 [node name="Level" type="Node2D"]
 script = ExtResource("1_f2txt")
@@ -40,7 +43,7 @@ texture = ExtResource("1_u52ul")
 [node name="StaticBody2D" type="StaticBody2D" parent="screenborder"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D"]
-position = Vector2(2799, 311)
+position = Vector2(2768, 308)
 shape = SubResource("RectangleShape2D_vonw3")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="screenborder"]
@@ -54,11 +57,10 @@ shape = SubResource("RectangleShape2D_vonw3")
 position = Vector2(154, -56)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D3"]
-position = Vector2(1238, -93)
+position = Vector2(1236, -85)
 shape = SubResource("RectangleShape2D_oi3di")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="screenborder"]
-visible = false
 position = Vector2(115, -42)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="screenborder/StaticBody2D4"]
@@ -72,28 +74,66 @@ script = ExtResource("4_0b4ue")
 [node name="Walls" type="Node2D" parent="."]
 
 [node name="Wall5" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(517, 487)
+position = Vector2(1716, 397)
 scale = Vector2(0.5, 0.5)
 
 [node name="Wall4" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(517, 426)
-scale = Vector2(0.5, 0.5)
+position = Vector2(519, 674)
+scale = Vector2(4.06283, 0.394156)
 
 [node name="Wall3" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(517, 55)
-scale = Vector2(0.5, 0.5)
+position = Vector2(1215, 315)
+scale = Vector2(0.5, 3.13794)
 
 [node name="Wall2" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(517, 180)
+position = Vector2(1215, 191)
 scale = Vector2(0.5, 0.5)
 
 [node name="Wall" parent="Walls" instance=ExtResource("3_oi3di")]
-position = Vector2(517, 306)
+position = Vector2(1211, 64)
 scale = Vector2(0.5, 0.5)
 
 [node name="Player_with_gun" parent="." instance=ExtResource("4_f2txt")]
 position = Vector2(124, 111)
 
 [node name="Camera2D" type="Camera2D" parent="."]
+drag_left_margin = 1.0
+drag_top_margin = 1.0
+drag_right_margin = 1.0
+drag_bottom_margin = 1.0
+
+[node name="Rooms" type="Node2D" parent="."]
+
+[node name="room1" type="Area2D" parent="Rooms"]
+position = Vector2(640, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/room1"]
+shape = SubResource("RectangleShape2D_f2txt")
+debug_color = Color(0.609055, 0.5395, 1.92523e-07, 0.42)
+
+[node name="room2" type="Area2D" parent="Rooms"]
+position = Vector2(1920, 360)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/room2"]
+shape = SubResource("RectangleShape2D_f2txt")
+debug_color = Color(0.926922, 0.171883, 0.523505, 0.42)
+
+[node name="room3" type="Area2D" parent="Rooms"]
+position = Vector2(1920, 1080)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/room3"]
+shape = SubResource("RectangleShape2D_f2txt")
+debug_color = Color(0.168549, 0.579451, 0.763687, 0.42)
+
+[node name="room4" type="Area2D" parent="Rooms"]
+position = Vector2(640, 1080)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Rooms/room4"]
+shape = SubResource("RectangleShape2D_f2txt")
+debug_color = Color(0.789657, 0.265223, 0.83792, 0.42)
 
 [connection signal="timeout" from="Timer" to="Timer" method="_on_timeout"]
+[connection signal="body_entered" from="Rooms/room1" to="." method="_on_room_1_body_entered"]
+[connection signal="body_entered" from="Rooms/room2" to="." method="_on_room_2_body_entered"]
+[connection signal="body_entered" from="Rooms/room3" to="." method="_on_room_3_body_entered"]
+[connection signal="body_entered" from="Rooms/room4" to="." method="_on_room_4_body_entered"]

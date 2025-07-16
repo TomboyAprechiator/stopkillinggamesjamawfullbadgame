@@ -8,6 +8,8 @@ size = Vector2(256, 256)
 [node name="Wall" type="StaticBody2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture_repeat = 2
 texture = ExtResource("1_xxgf6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
