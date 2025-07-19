@@ -4,6 +4,7 @@
 [ext_resource type="Script" uid="uid://67n5gqalvvww" path="res://bullet.gd" id="1_v8qja"]
 
 [node name="bullet" type="RigidBody2D" groups=["bullets"]]
+collision_layer = 2
 inertia = 1.0
 script = ExtResource("1_v8qja")
 force = 2000.0

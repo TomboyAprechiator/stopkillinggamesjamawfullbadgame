@@ -1,6 +1,12 @@
 Credits and Asset Licenses
 ==========================
 
+Tileset: "Platformer Tilesets"
+	By Zack Alvarado / greggman
+	https://opengameart.org/content/platformer-tilesets
+	CC-BY 3.0 liscence https://creativecommons.org/licenses/by/3.0/
+	
+
 Textures:
 	Grass & Bricks texture taken from: 
 		Tiny Texture Pack 1
