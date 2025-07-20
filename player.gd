@@ -37,3 +37,6 @@ func _on_push_area_body_entered(body: Node2D) -> void:
 		var diff = body.global_position - global_position
 		var direction = diff.normalized()
 		body.apply_impulse(direction*1000,Vector2.ZERO)
+		
+func die():
+	print("You are dead, dead dead! Tought you was hot - guess what, you're not")

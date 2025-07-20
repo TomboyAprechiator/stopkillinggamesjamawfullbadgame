@@ -1,0 +1,14 @@
+[gd_scene load_steps=3 format=3 uid="uid://b86cej71elnm8"]
+
+[ext_resource type="Script" uid="uid://d0tsdc6ve6cue" path="res://enemygun.gd" id="1_07dmd"]
+[ext_resource type="Texture2D" uid="uid://bawpplfo4nxrc" path="res://enemygun.png" id="2_8wunx"]
+
+[node name="enemygun" type="Node2D"]
+script = ExtResource("1_07dmd")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_8wunx")
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(22, -5)

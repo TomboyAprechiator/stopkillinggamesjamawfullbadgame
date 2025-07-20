@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://csonnqyjmmke8"]
+
+[ext_resource type="Script" uid="uid://bo57w1ybdjnnl" path="res://oldman.gd" id="1_2774u"]
+[ext_resource type="Texture2D" uid="uid://qmvngmxlxo2j" path="res://oldman.png" id="1_vmbdr"]
+
+[node name="Oldman" type="CharacterBody2D" groups=["enemys"]]
+collision_layer = 9
+collision_mask = 73
+script = ExtResource("1_2774u")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_vmbdr")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+scale = Vector2(3, 3)
+polygon = PackedVector2Array(-12, 12, 11.6667, 12, 11.3333, -4, 8.33333, -8.66667, 4, -11.3333, -3.66667, -11.3333, -7.66667, -8.66667, -12, -3.66667)
+
+[node name="killarea" type="Area2D" parent="." groups=["enemys"]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killarea"]
+polygon = PackedVector2Array(-37, 36, 38, 37, 39, -11, 22, -35, 7, -40, -15, -38, -32, -24, -42, -9, -42, 36)
+
+[connection signal="body_entered" from="killarea" to="." method="_on_killarea_body_entered"]

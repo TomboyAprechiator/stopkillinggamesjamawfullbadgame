@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dsnww8rf830ud"]
+
+[ext_resource type="Script" uid="uid://d0tsdc6ve6cue" path="res://enemygun.gd" id="1_174jt"]
+[ext_resource type="PackedScene" uid="uid://bb1ds4pnxjump" path="res://agent.tscn" id="2_pnln1"]
+[ext_resource type="PackedScene" uid="uid://b86cej71elnm8" path="res://enemygun.tscn" id="3_csrpy"]
+
+[node name="agentwithgun" type="Node2D"]
+script = ExtResource("1_174jt")
+
+[node name="Agent" parent="." instance=ExtResource("2_pnln1")]
+script = ExtResource("1_174jt")
+
+[node name="enemygun" parent="." instance=ExtResource("3_csrpy")]

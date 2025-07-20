@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://bb1ds4pnxjump"]
+
+[ext_resource type="Script" uid="uid://blqctx1ckgcse" path="res://agent.gd" id="1_dhb2b"]
+[ext_resource type="Texture2D" uid="uid://c8t0xnvhybfna" path="res://agent.png" id="1_jv27j"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dhb2b"]
+radius = 36.0555
+
+[node name="Agent" type="CharacterBody2D"]
+script = ExtResource("1_dhb2b")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("1_jv27j")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_dhb2b")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(12, 12, 534, 75, 534, -251, 11, -37)
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
