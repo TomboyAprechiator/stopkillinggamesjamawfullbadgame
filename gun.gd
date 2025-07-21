@@ -8,6 +8,7 @@ func shoot():
 	bullet.global_position = $muzzle.global_position
 	bullet.rotation = rotation
 	get_tree().current_scene.add_child(bullet)
+	$AudioStreamPlayer2D.play()
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

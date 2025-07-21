@@ -17,5 +17,8 @@ func _on_killarea_body_entered(body: Node2D) -> void:
 		body.die()
 
 func die():
+	$AudioStreamPlayer2D.play()
+	visible = false
+	await get_tree().create_timer(1).timeout
 	print("enemy died :)")
 	queue_free()

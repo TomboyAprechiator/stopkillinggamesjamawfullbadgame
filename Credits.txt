@@ -13,8 +13,22 @@ Tile Font: "Operation Napalm"
 	https://www.fontspace.com/operation-napalm-font-f101917
 
 Textures:
-	Grass & Bricks texture taken from: 
+	Grass texture in the BG taken from: 
 		Tiny Texture Pack 1
 		by Screaming Brain Studios
 		CC0/Public Domain License
 		https://screamingbrainstudios.itch.io/tiny-texture-pack
+
+Audio:
+	
+	Gun Noise: 8-Bit Gun 1_1
+	By Joao_Janz
+	CC0 Liscense
+	https://freesound.org/people/Joao_Janz/sounds/478322/
+	
+	Enemy Death Noise / Pop Noise: pop.mp3
+	By izzytherobloxgamer09
+	CC0 Liscense
+	https://freesound.org/people/izzytherobloxgamer09/sounds/531043/
+	
+	

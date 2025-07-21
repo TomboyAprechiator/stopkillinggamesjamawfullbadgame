@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://csonnqyjmmke8"]
+[gd_scene load_steps=4 format=3 uid="uid://csonnqyjmmke8"]
 
 [ext_resource type="Script" uid="uid://bo57w1ybdjnnl" path="res://oldman.gd" id="1_2774u"]
 [ext_resource type="Texture2D" uid="uid://qmvngmxlxo2j" path="res://oldman.png" id="1_vmbdr"]
+[ext_resource type="AudioStream" uid="uid://bylg1ulwgfode" path="res://531043__izzytherobloxgamer09__pop.mp3" id="3_n2br7"]
 
 [node name="Oldman" type="CharacterBody2D" groups=["enemys"]]
 collision_layer = 9
@@ -20,5 +21,8 @@ polygon = PackedVector2Array(-12, 12, 11.6667, 12, 11.3333, -4, 8.33333, -8.6666
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="killarea"]
 polygon = PackedVector2Array(-37, 36, 38, 37, 39, -11, 22, -35, 7, -40, -15, -38, -32, -24, -42, -9, -42, 36)
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_n2br7")
 
 [connection signal="body_entered" from="killarea" to="." method="_on_killarea_body_entered"]

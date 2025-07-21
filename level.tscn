@@ -1185,7 +1185,7 @@ autostart = true
 script = ExtResource("4_0b4ue")
 
 [node name="Player_with_gun" parent="." instance=ExtResource("4_f2txt")]
-position = Vector2(1829, -18)
+position = Vector2(108, 115)
 
 [node name="Camera2D" type="Camera2D" parent="."]
 drag_left_margin = 1.0
