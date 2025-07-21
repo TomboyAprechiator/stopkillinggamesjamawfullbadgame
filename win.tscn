@@ -1,0 +1,64 @@
+[gd_scene load_steps=3 format=3 uid="uid://dcbevnfpt5w0u"]
+
+[ext_resource type="Script" uid="uid://gkswbk3rquww" path="res://WIN.gd" id="1_hgi8f"]
+[ext_resource type="Texture2D" uid="uid://bbrsspj47he88" path="res://trophy.png" id="2_tmki8"]
+
+[node name="WIN" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_hgi8f")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(190, 174)
+scale = Vector2(9.48, 8.49941)
+texture = ExtResource("2_tmki8")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 481.0
+offset_top = 35.0
+offset_right = 791.0
+offset_bottom = 118.0
+theme_override_font_sizes/font_size = 60
+text = "YOU WON!"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 119.0
+offset_right = 1246.0
+offset_bottom = 388.0
+theme_override_font_sizes/font_size = 22
+text = "The code is safe, soon to be online, ensuring preservation of the game forever more.
+
+Thank you for playing my terrbile game, player. It means alot to me that anyone
+would give this steaming turd the time of day. I hope you had some fun.
+Maybe if i make another game in the future, itll be slightly better. Thats how that 
+works, yea? Improvement over time? Sure.
+
+Thank you :)"
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 337.0
+offset_top = 519.0
+offset_right = 505.0
+offset_bottom = 590.0
+theme_override_font_sizes/font_size = 45
+text = "MENUE"
+
+[node name="Button2" type="Button" parent="."]
+layout_mode = 0
+offset_left = 666.0
+offset_top = 523.0
+offset_right = 927.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 45
+text = "QUIT TO OS"
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_button_2_pressed"]

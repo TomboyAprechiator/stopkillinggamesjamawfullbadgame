@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://b3doy8qufbenp"]
+
+[ext_resource type="Script" uid="uid://vey5y5c04njf" path="res://the_code.gd" id="1_tvyns"]
+[ext_resource type="Texture2D" uid="uid://d3ubkt21kiyld" path="res://dacode.png" id="2_fwqqc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tvyns"]
+size = Vector2(99, 95)
+
+[node name="TheCode" type="CharacterBody2D"]
+collision_layer = 33
+collision_mask = 33
+script = ExtResource("1_tvyns")
+
+[node name="winarea" type="Area2D" parent="."]
+collision_layer = 33
+collision_mask = 33
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="winarea"]
+position = Vector2(-3.5, 0.5)
+shape = SubResource("RectangleShape2D_tvyns")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_fwqqc")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(-37, -42, 45, -42, 45, -38, 28, -21, 27, -13, 21, -2, 31, 8, 39, 21, 42, 31, 42, 49, -38, 48, -41, 41, -33, 32, -31, 26, -31, 7, -40, -1, -48, -14, -48, -25)
+
+[connection signal="body_entered" from="winarea" to="." method="_on_winarea_body_entered"]

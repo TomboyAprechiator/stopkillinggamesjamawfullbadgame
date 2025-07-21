@@ -39,4 +39,4 @@ func _on_push_area_body_entered(body: Node2D) -> void:
 		body.apply_impulse(direction*1000,Vector2.ZERO)
 		
 func die():
-	print("You are dead, dead dead! Tought you was hot - guess what, you're not")
+	get_tree().change_scene_to_file("res://gameover.tscn")

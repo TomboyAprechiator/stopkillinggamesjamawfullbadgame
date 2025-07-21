@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://cji50p0u3xxr7"]
+
+[ext_resource type="Script" uid="uid://c32q1fgymd28x" path="res://leveldoor.gd" id="1_w4qjo"]
+[ext_resource type="Texture2D" uid="uid://co25a0x7bgmv3" path="res://door.png" id="2_503rm"]
+
+[node name="Leveldoor" type="Node2D"]
+script = ExtResource("1_w4qjo")
+
+[node name="Area2D" type="Area2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PackedVector2Array(-15, 32, 16, 32, 16, -22, 14, -25, 11, -28, 8, -30, 4, -32, -4, -32, -8, -30, -11, -27, -13, -24, -15, -21)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2, 2)
+texture = ExtResource("2_503rm")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
