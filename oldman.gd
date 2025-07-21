@@ -4,6 +4,7 @@ extends CharacterBody2D
 @export var movespeed = 150
 @export var gravity = 400
 var movedir = 1
+var hackysolution = 1
 
 func _physics_process(delta: float) -> void:
 	velocity.x = movespeed * movespeed * delta * movedir
@@ -13,12 +14,13 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_killarea_body_entered(body: Node2D) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("player") and hackysolution == 1:
 		body.die()
 
 func die():
 	$AudioStreamPlayer2D.play()
 	visible = false
+	hackysolution = 0
 	await get_tree().create_timer(1).timeout
 	print("enemy died :)")
 	queue_free()
