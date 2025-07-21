@@ -7,6 +7,11 @@ Tileset: "Platformer Tilesets"
 	CC-BY 3.0 liscence https://creativecommons.org/licenses/by/3.0/
 	
 
+Tile Font: "Operation Napalm"
+	by	GGBotNet
+	CC0/Public Domain License
+	https://www.fontspace.com/operation-napalm-font-f101917
+
 Textures:
 	Grass & Bricks texture taken from: 
 		Tiny Texture Pack 1

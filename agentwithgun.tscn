@@ -9,5 +9,7 @@ script = ExtResource("1_174jt")
 
 [node name="Agent" parent="." instance=ExtResource("2_pnln1")]
 script = ExtResource("1_174jt")
+orbitradius = 60.0
+bulletscene = null
 
 [node name="enemygun" parent="." instance=ExtResource("3_csrpy")]

@@ -1,0 +1,108 @@
+[gd_scene load_steps=3 format=3 uid="uid://daum7rwugiqcy"]
+
+[ext_resource type="FontFile" uid="uid://xyvqwq24l1cm" path="res://OperationNapalm-nRBWO.ttf" id="1_0fbet"]
+[ext_resource type="Script" uid="uid://cn3xw5un4we2v" path="res://control.gd" id="1_62e2m"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_62e2m")
+
+[node name="Container" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -190.0
+offset_top = -105.0
+offset_right = 190.0
+offset_bottom = 105.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Play" type="Button" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "PLAY"
+
+[node name="About" type="Button" parent="Container"]
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_font_sizes/font_size = 42
+text = "ABOUT"
+
+[node name="Quit" type="Button" parent="Container"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 42
+text = "QUIT"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 191.0
+offset_top = 100.0
+offset_right = 557.0
+offset_bottom = 145.0
+rotation = -0.0142027
+scale = Vector2(2.59476, 4.01321)
+theme_override_fonts/font = ExtResource("1_0fbet")
+theme_override_font_sizes/font_size = 39
+text = "SAVE THE SOURCECODE"
+
+[node name="Window" type="Window" parent="."]
+title = "ABOUT THIS GAME"
+position = Vector2i(335, 70)
+size = Vector2i(707, 590)
+visible = false
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Window"]
+offset_left = 38.0
+offset_top = 13.0
+offset_right = 1148.0
+offset_bottom = 517.0
+theme_override_font_sizes/bold_italics_font_size = 30
+theme_override_font_sizes/italics_font_size = 30
+theme_override_font_sizes/mono_font_size = 30
+theme_override_font_sizes/normal_font_size = 20
+theme_override_font_sizes/bold_font_size = 30
+text = "                                     ABOUT THIS GAME                                                    
+
+LORE:
+You are a cool badass breaking into Evilcorp(TM)s Headquaters.
+Your mission is to recover the [i]SOURCECODE[/i] to your favorite
+vidya gaem. Despite the game no longer being for sale, Evilcorp
+have refused to release the code to the public. Evry single one of 
+them is in on it. You have to prevent your beloved game from 
+becoming lost media - by any means neseccary.
+
+META:
+This is a severely undercooked turd. This is my first time making
+a full \"game\", my first time participating in a game jam, 
+my first time using godot ect. The result is awfull, barely a game.
+Someone that knows what they're doing could probabbly do this
+in a few hours. But for me, it took the entire 10 days. So many ideas 
+i had, like enemys that actualy shoot back, ect., 
+will never see the light of day."
+fit_content = true
+scroll_active = false
+autowrap_mode = 0
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -23.0
+offset_right = 40.0
+grow_vertical = 0
+text = "By TomboyAprechiator"
+
+[connection signal="pressed" from="Container/Play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="Container/About" to="." method="_on_about_pressed"]
+[connection signal="pressed" from="Container/Quit" to="." method="_on_quit_pressed"]
+[connection signal="close_requested" from="Window" to="." method="_on_window_close_requested"]
